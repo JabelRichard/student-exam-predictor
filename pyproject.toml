@@ -1,0 +1,9 @@
+[project]
+name = "exam-score-predictor"
+version = "0.1.0"
+description = "Predict a student's exam score from homework and attendance."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
