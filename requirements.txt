@@ -1,5 +1,5 @@
 streamlit>=1.50
-scikit-learn>=1.5
+scikit-learn==1.9.1  # must match the version that saved model.joblib
 pandas>=2.2
 altair>=5.4
 joblib>=1.4

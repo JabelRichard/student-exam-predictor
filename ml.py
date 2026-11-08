@@ -107,7 +107,8 @@ def best_model(models: dict[str, TrainedModel]) -> TrainedModel:
 # ---------- Saving and loading ----------
 
 def data_fingerprint(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
+    # Normalise line endings so Windows (CRLF) and Linux (LF) checkouts of the same CSV match
+    return hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
 
 
 def save_models(models: dict[str, TrainedModel], data_hash: str, path: Path = MODEL_PATH) -> None:
