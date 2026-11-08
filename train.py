@@ -1,3 +1,4 @@
+"""Train the exam-score models on the student CSV and save them to model.joblib."""
 
 from __future__ import annotations
 
